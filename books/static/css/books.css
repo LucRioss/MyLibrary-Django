@@ -1,0 +1,31 @@
+
+/* base_gerenic.html */
+.title_fix{
+    background-color: #252a51;
+    padding: 10px 10px 10px 19px;
+    color: white;
+    margin-bottom: 1%;
+}
+
+/* livros_fomrs.html */
+.add_livros{
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 50%;
+    width: 0%;
+}
+
+/*livros_list*/
+
+.titulo_list{
+    line-height: 25px;
+    font-size: 25px;
+    margin-left: 1%;
+    color: #050B33;
+}
+
+.resenha_list{
+    padding: 1px 0px 1px 5px;
+    margin-left: 2%;
+    font-size: 18px;
+}

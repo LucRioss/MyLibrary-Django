@@ -1,19 +1,14 @@
 {% extends "base_generic.html" %}
 
-{% block title %}MyLibrary{% endblock %}
-
 {% block content %}
     {% for livros in livros_list %}
-        <article>
-            <h2>
-                <a href="{{ livros.get_absolute_url }}">
-                    {{ livros.titulo}}
-                </a>
-            </h2>
-            <p class="date">
-                {{ livros.titulo }} por {{ livros.autor }}
-            </p>
-            {{ livros.body|linebreaks|truncatewords:10 }}
-        </article>
+        <div class="titulo_list">
+            <p>{{ livros.titulo}} -/- {{ livros.autor }}.</p>
+        </div>
+        
+        <div class="resenha_list">
+             <p>{{ livros.resenha}}</p>
+        </div>
+           <!--{{ livros.body|linebreaks|truncatewords:10 }}-->      
     {% endfor %}
 {% endblock %}

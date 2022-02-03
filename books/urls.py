@@ -6,6 +6,7 @@ app_name = 'books'
 
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('livros/create', views.LivrosCreate.as_view(), name='create'),
     path('livros/update/<int:pk>', views.LivrosUpdate.as_view(), name='update'),
     path('livros/detail/<int:pk>', views.LivrosDetailView.as_view(), name='detail'),
