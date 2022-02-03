@@ -2,7 +2,7 @@ from msilib.schema import ListView
 from django.shortcuts import render
 from django.views.generic import CreateView, UpdateView, DetailView, ListView, DeleteView
 from django.urls import reverse_lazy
-
+from django.shortcuts import render
 from books.models import Livros
 
 class LivrosCreate(CreateView):
@@ -22,3 +22,6 @@ class LivrosList(ListView):
 class LivrosDelete(DeleteView):
     model = Livros
     success_url = reverse_lazy('books:list') 
+
+def index(request):
+    return render(request, 'index.html',)
