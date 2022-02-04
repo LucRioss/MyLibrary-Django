@@ -7,6 +7,11 @@
     margin-bottom: 1%;
 }
 
+.button_home{
+    color: #252a51;
+
+}
+
 /* livros_fomrs.html */
 .add_livros{
     margin-top: 1%;
@@ -16,7 +21,6 @@
 }
 
 /*livros_list*/
-
 .titulo_list{
     line-height: 25px;
     font-size: 25px;
