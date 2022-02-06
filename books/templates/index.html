@@ -1,4 +1,7 @@
 {% extends "base_generic.html" %}
+{% load static %}
+
+
 {% block content %}
 <body>
     <!--Botão de Login-->
@@ -6,10 +9,11 @@
 
     <div class="button_index">
         <a href="http://127.0.0.1:8000/books/livros/create">
-            <button>Adicione seu Livro</button>
+            <img src=" {% static 'image/add_books.png' %} " height ="61" width="226"/>
         </a>
+         
         <a href="http://127.0.0.1:8000/books/livros/list">
-            <button>Veja seus Livros</button>
+            <img src=" {% static 'image/list_books.png' %} " height ="61" width="197"/>
         </a>
     </div>
 

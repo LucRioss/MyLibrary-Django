@@ -16,17 +16,13 @@
 <body>
 
     <div class="title_fix">
-        
-        <div class="button_home">
-            <a href="http://127.0.0.1:8000/books/">
-                <button></button>
-            </a>
-        </div>
-        
         <header>
-            <h1>MyLibrary</h1>
+            <a href="http://127.0.0.1:8000/books/">
+                <img src=" {% static 'image/buttonhome.png' %} " height ="61" width="180"/>
+            </a>
+            {% block header %}
+            {% endblock %}
         </header>
-
     </div>
     
     <main>
@@ -34,8 +30,6 @@
         <!--Not Delete, this block content contain all function this program-->
         {% endblock %}
     </main>
-
-    
 
 </body>
 </html>

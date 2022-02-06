@@ -1,20 +1,26 @@
 {% extends "base_generic.html" %}
+{% load static %}
+
+{% block header %}
+<div class="btlist_header">
+    <a href="http://127.0.0.1:8000/books/livros/list">
+        <img src=" {% static 'image/list_books.png' %} " height ="48" width="120"/>
+    </a>
+</div>
+{% endblock %}
 
 {% block content %}
 <div class="add_livros">
     <form action="" method="POST">
         {% csrf_token %}
-        <tabel>
-            {{form.as_table}}
-        </table>
-        <input type="submit" value="Adicionar">
+        <div class="table_form">
+            <tabel>
+                {{form.as_table}}
+            </table>
+        </div>
+        <div class="btsubmit_form">
+            <input type="image" src=" {% static 'image/submit_books.png' %} " height ="31" width="99">
+        </div>    
     </form> 
 </div>
-
-<div class="button_form">
-    <a href="http://127.0.0.1:8000/books/livros/list">
-        <button>Veja seus Livros</button>
-    </a>
-</div>
-
 {% endblock %}

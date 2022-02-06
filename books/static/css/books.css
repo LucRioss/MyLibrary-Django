@@ -1,23 +1,42 @@
+/* 
+    background-color: #1629b4;
+*/
 
 /* base_gerenic.html */
 .title_fix{
-    background-color: #252a51;
+    background-color: #000a66;
     padding: 10px 10px 10px 19px;
-    color: white;
     margin-bottom: 1%;
 }
-
-.button_home{
-    color: #252a51;
+.button_index{/*top right bottom left*/
+    padding: 20% 20% 10% 35%;
 
 }
+.btlist_header{
+    display: inline;
+    position: relative;
+    bottom: 5%;
+    left: 76%;
+ }
 
 /* livros_fomrs.html */
 .add_livros{
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-right: 50%;
-    width: 0%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.table_form{
+    display: block;
+    position: relative;
+    left: 3%;
+    width: 10%;
+    height: 60%;
+    margin-bottom: 1%;
+}
+.btsubmit_form{
+    display: inline-block;
+    position: relative;
+    left: 3%;
 }
 
 /*livros_list*/
@@ -27,7 +46,6 @@
     margin-left: 1%;
     color: #050B33;
 }
-
 .resenha_list{
     padding: 1px 0px 1px 5px;
     margin-left: 2%;
