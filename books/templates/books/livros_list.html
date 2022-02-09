@@ -11,6 +11,8 @@
 
 {% block content %}
     {% for livros in livros_list %}
+
+        <img src="{livros.imagem.url}">
         <div class="titulo_list">
 
             <a href="http://127.0.0.1:8000/books/livros/detail/{{livros.cod_book}}">
