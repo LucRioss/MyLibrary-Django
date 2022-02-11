@@ -1,14 +1,23 @@
 {% extends "base_generic.html" %}
+{% load static %}
+
+{% block header %}
+<div class="btlist_header">
+    <a href="http://127.0.0.1:8000/books/livros/list">
+        <img src=" {% static 'image/list_books.png' %} " height ="48" width="120"/>
+    </a>
+</div>
+{% endblock %}
 
 {% block content %}
     
 <h1>Delete Livros</h1>
 
-<p>Tem Certeza que quer deletar o Livros: {{ titulo }}? </p>
+<p>Tem Certeza que quer deletar o Livros: {{ livros.titulo }}? </p>
 
 <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Delete">
+    <input type="submit" value="Sim">
 </form>
-
+    <button><a href="http://127.0.0.1:8000/books/livros/list">Não</a></button>
 {% endblock %}

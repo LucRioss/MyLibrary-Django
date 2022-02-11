@@ -1,14 +1,33 @@
 {% extends "base_generic.html" %}
+{% load static %}
+
+{% block header %}
+<div class="btlist_header">
+    <a href="http://127.0.0.1:8000/books/livros/create">
+        <img src=" {% static 'image/add_books.png' %} " height ="48" width="150"/>
+    </a>
+</div>
+{% endblock %}
 
 {% block content %}
     {% for livros in livros_list %}
+
+        {% if livros.imagem %}
+            <img src="{{ livros.imagem.url }}" style="max-height:300px">
+        {% endif %}
+        
         <div class="titulo_list">
-            <p>{{ livros.titulo}} -/- {{ livros.autor }}.</p>
+
+            <a href="http://127.0.0.1:8000/books/livros/detail/{{livros.cod_book}}">
+                <p>  {{ livros.titulo}} -/- {{ livros.autor }}.</p>
+            </a>
+
         </div>
         
         <div class="resenha_list">
              <p>{{ livros.resenha}}</p>
         </div>
            <!--{{ livros.body|linebreaks|truncatewords:10 }}-->      
-    {% endfor %}
+    {% endfor %}   
+
 {% endblock %}

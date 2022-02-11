@@ -1,5 +1,4 @@
 from audioop import reverse
-from turtle import update
 from django.db import models
 from users.models import Users
 from django.urls import reverse
@@ -15,7 +14,7 @@ class Livros(models.Model):
     resenha = models.TextField(blank=True,  null=True)
     cod_book = models.AutoField(primary_key=True) 
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
-    
+    imagem = models.ImageField(upload_to='imagens/',blank=True, null=True)
     
     def __str__(self):
         return self.titulo

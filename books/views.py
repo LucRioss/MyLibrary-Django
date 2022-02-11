@@ -11,7 +11,7 @@ class LivrosCreate(CreateView):
    
 class LivrosUpdate(UpdateView):
     model = Livros
-    fields = ['titulo', 'editora', 'autor', 'resenha'] 
+    fields = ['titulo', 'editora', 'autor', 'resenha','imagem'] 
 
 class LivrosDetailView(DetailView):
     model = Livros
