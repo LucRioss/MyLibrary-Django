@@ -11,13 +11,17 @@
 
 {% block content %}
     
-<h1>Delete Livros</h1>
-
-<p>Tem Certeza que quer deletar o Livros: {{ livros.titulo }}? </p>
+<p>Tem Certeza que quer deletar o Livro: <strong>{{ livros.titulo }}?</strong></p>
 
 <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Sim">
+
+    <input type="image" src=" {% static 'image/confirmed_delete.png' %} " style="max-height:25px"/>
+
+    <a href="http://127.0.0.1:8000/books/livros/list">
+        <img src=" {% static 'image/cancel_delete.png' %} " style="max-height:25px"/>
+    </a>
+
 </form>
-    <button><a href="http://127.0.0.1:8000/books/livros/list">Não</a></button>
+    
 {% endblock %}

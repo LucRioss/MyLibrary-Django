@@ -10,17 +10,31 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ post.title }}</h2>
-    <p class="date">
-        Livros {{livros.titulo}} por {{livros.autor}} {{livros.editora}}
-    </p>
-    {{ livros.body|linebreaks}}
+<div class="all_detail">
 
+    <div class="img_detail">
+        {% if livros.imagem %}
+            <img src="{{ livros.imagem.url }}" align="left" style="max-height:350px">
+        {% endif %}
+    </div>    
+
+    <p>
+        <strong>Titulo:</strong> {{livros.titulo}}</br> 
+        <strong>por:</strong> {{livros.autor}}</br> 
+        <strong>Editora: </strong>{{livros.editora}}</br>
+        <strong>Rensenha: </strong>{{livros.resenha}}
+    </p>
+
+</div>
+
+<div class="buttons_detail">
     <a href="http://127.0.0.1:8000/books/livros/update/{{livros.cod_book}}">
-        <button>Att seu Livro</button>
+        <img src=" {% static 'image/att_detail.png' %} " height ="35" width="90"/>
     </a>
 
     <a href="http://127.0.0.1:8000/books/livros/delete/{{livros.cod_book}}">
-        <button>Delete</button>
+        <img src=" {% static 'image/delete_detail.png' %} " height ="35" width="90"/>
     </a>
+</div>
+
 {% endblock %}
